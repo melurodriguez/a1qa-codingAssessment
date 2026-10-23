@@ -84,11 +84,11 @@ from main import ProductModel, StoreInventory, createOrder, saveInventoryToFile
 
 # Create inventory and add items
 inventory = StoreInventory()
-laptop = ProductModel(name="Laptop", category="Electronics", price=999.99, stock_quantity=5)
+laptop = ProductModel(name="Laptop", category="Electronics", price=999.99, stockQuantity=5)
 inventory.addProduct(laptop)
 
 # Process an order (15% discount applied for subtotal >= $500)
-order_summary = createOrder(inventory, product_name="Laptop", quantity=1)
+order_summary = createOrder(inventory, productName="Laptop", quantity=1)
 print(order_summary)
 
 # Persist inventory to disk
